@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>typewriter</title>
+  <link rel="stylesheet" href="./dist/style.css">
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  main {
+    width: 100%;
+    height: 100vh;
+    background-color: #263238;
+    color: #fff;
+/*
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center
+*/
+  }
+  h1 {
+
+  }
+  .main {
+    ransition: all 2s ease 0s;
+  }
+  .cb-typewriter {
+    transform: rotate(-1600deg) scale(8);
+    font-weight: bold;
+    font-family: 'メイリオ';
+    text-shadow: 0 0 30px #fff;
+
+    animation-name: anim;
+    animation-duration: 10s;
+    font-size: 120px;
+  }
+  @keyframes anim {
+    0% {
+      text-shadow: 0 0 0 #fff;
+      font-size: 0;
+    }
+    20% {
+      font-size: 120px;
+    }
+    100% {
+      text-shadow: 0 0 30px #fff;
+    }
+  }
+  </style>
+</head>
+
+<body>
+  <main class="main"></main>
+
+  <script src="./dist/bundle.js"></script>
+</body>
+
+</html>

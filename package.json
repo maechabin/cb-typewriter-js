@@ -1,0 +1,16 @@
+{
+  "name": "typewriter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "watchify -t babelify ./src/app.js -o ./dist/bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "watchify": "^3.7.0"
+  }
+}
