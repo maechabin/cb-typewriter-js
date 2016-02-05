@@ -1,10 +1,10 @@
 {
-  "name": "typewriter",
-  "version": "1.0.0",
+  "name": "cb-typewriter",
+  "version": "0.0.9",
   "description": "",
-  "main": "index.js",
+  "main": ".dist/bundle.js",
   "scripts": {
-    "watch": "watchify -t babelify ./src/app.js -o ./dist/bundle.js"
+    "watch": "watchify -t babelify ./src/app.js -o ./dist/cb-typewriter.js"
   },
   "author": "",
   "license": "ISC",

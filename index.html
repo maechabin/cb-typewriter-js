@@ -5,7 +5,6 @@
 <head>
   <meta charset="utf-8">
   <title>typewriter</title>
-  <link rel="stylesheet" href="./dist/style.css">
   <style>
   body {
     margin: 0;
@@ -35,38 +34,23 @@
   h1 {
 
   }
-  .main {
-    ransition: all 2s ease 0s;
-  }
   .cb-typewriter {
-    transform: rotate(-1600deg) scale(8);
     font-weight: bold;
     font-family: 'メイリオ';
     text-shadow: 0 0 30px #fff;
+  }
 
-    animation-name: anim;
-    animation-duration: 10s;
-    font-size: 120px;
-  }
-  @keyframes anim {
-    0% {
-      text-shadow: 0 0 0 #fff;
-      font-size: 0;
-    }
-    20% {
-      font-size: 120px;
-    }
-    100% {
-      text-shadow: 0 0 30px #fff;
-    }
-  }
   </style>
 </head>
 
 <body>
-  <main class="main"></main>
-
-  <script src="./dist/bundle.js"></script>
+  <main class="cb-typewriter"></main>
+  <script src="./dist/cb-typewriter.js"></script>
+  <script>
+  window.onload = function () {
+    new TypeWriter(['aaa', 'bbb', 'ccc']).init();
+  }
+  </script>
 </body>
 
 </html>

@@ -1,35 +1,52 @@
-const text = ['aaa', '10th', 'Anniversary'];
+export default class TypeWriter {
 
-const strToArray = (string) => {
-  let str = string;
-  let strArray = str.split('');
-  return strArray;
-}
-
-const displayArray = (array, callback) => {
-  let main = document.querySelectorAll('.main');
-  let elemDiv = document.createElement('div');
-  main[0].appendChild(elemDiv);
-
-  const act = () => {
-    if (array.length === 0) return (callback) ? callback() : "";
-    let param = array[0];
-    let elemSpan = document.createElement('span');
-    elemSpan.setAttribute('class', 'cb-typewriter');
-    elemSpan.innerHTML = param;
-    elemDiv.appendChild(elemSpan);
-    array.shift();
-
-    setTimeout(() => {
-      act();
-    }, 160);
+  constructor(arr) {
+    this.array = arr;
   }
 
-  act();
-};
+  strToArray(str) {
+    let strArray = str.split('');
+    return strArray;
+  }
 
-displayArray(strToArray(text[0]), () => {
-  displayArray(strToArray(text[1]), () => {
-    displayArray(strToArray(text[2]))
-  });
-});
+  displayArray(array, callback) {
+    let elem = document.querySelectorAll('.cb-typewriter');
+    let elemDiv = document.createElement('div');
+    elem[0].appendChild(elemDiv);
+
+    const action = () => {
+      if (array.length === 0) {
+        return (callback) ? callback() : '';
+      }
+      let elemSpan = document.createElement('span');
+      elemSpan.setAttribute('class', 'cb-typewriter');
+      elemSpan.innerHTML = array[0];
+      elemDiv.appendChild(elemSpan);
+      array.shift();
+
+      setTimeout(() => {
+        action();
+      }, 500);
+    }
+
+    action();
+  }
+
+  loopArray() {
+    const action = () => {
+      if (this.array.length === 0) {
+        return;
+      }
+      this.displayArray(this.strToArray(this.array[0]), () => {
+        action();
+      });
+      this.array.shift();
+    }
+    action();
+  }
+
+  init() {
+    this.loopArray();
+  }
+
+}
