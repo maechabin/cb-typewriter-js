@@ -29,7 +29,7 @@ class TypeWriter {
         return (callback) ? callback() : '';
       }
       let elemSpan = document.createElement('span');
-      elemSpan.setAttribute('class', 'cb-typewriter');
+      elemSpan.setAttribute('class', 'cb-tw');
       elemSpan.innerHTML = array[0];
       elemDiv.appendChild(elemSpan);
       array.shift();
@@ -56,7 +56,6 @@ class TypeWriter {
   }
 
   init(options) {
-    console.log(options);
     this.selector = options.selector || this.default.selector;
     this.interval = options.interval || this.default.interval;
     this.callback = options.callback || this.default.callback;

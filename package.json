@@ -1,18 +1,19 @@
 {
-  "name": "cb-typewriter",
-  "version": "0.0.9",
+  "name": "cbtypewriter",
+  "version": "0.2.0",
   "description": "",
-  "main": ".dist/bundle.js",
+  "main": ".dist/cb-typewriter.min.js",
   "scripts": {
-    "watch": "watchify -t babelify ./src/app.js -o ./dist/cb-typewriter.js",
-    "build": "babel ./src/app.js -o ./dist/cb-typewriter.js"
+    "watch": "babel ./src/app.js -w -o ./dist/cb-typewriter.js",
+    "build": "babel ./src/app.js | uglifyjs -c warnings=false > ./dist/cb-typewriter.min.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Takanori Maeda (@maechabin)",
+  "license": "Mit license",
   "devDependencies": {
     "babel-cli": "^6.4.5",
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
+    "uglify-js": "^2.6.1",
     "watchify": "^3.7.0"
   }
 }
