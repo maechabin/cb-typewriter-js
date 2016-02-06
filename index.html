@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8">
   <title>typewriter</title>
+  <script src="dist/cb-typewriter.js"></script>
   <style>
   body {
     margin: 0;
@@ -45,11 +46,12 @@
 
 <body>
   <main class="cb-typewriter"></main>
-  <script src="./dist/cb-typewriter.js"></script>
   <script>
-  window.onload = function () {
-    new TypeWriter(['aaa', 'bbb', 'ccc']).init();
-  }
+  var obj = {};
+  obj.interval = 100;
+  new TypeWriter(['aaa', 'bbb', 'ccc']).init(
+      {interval: 100}
+  );
   </script>
 </body>
 

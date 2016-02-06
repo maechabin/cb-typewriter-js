@@ -1,7 +1,17 @@
-export default class TypeWriter {
+class TypeWriter {
 
   constructor(arr) {
+    this.default = {
+      selector: '.cb-typewriter',
+      interval: 500,
+      callback: () => {
+        return;
+      }
+    };
     this.array = arr;
+    this.selector = this.default.selector;
+    this.interval = this.default.interval;
+    this.callback = this.default.callback;
   }
 
   strToArray(str) {
@@ -10,7 +20,7 @@ export default class TypeWriter {
   }
 
   displayArray(array, callback) {
-    let elem = document.querySelectorAll('.cb-typewriter');
+    let elem = document.querySelectorAll(this.selector);
     let elemDiv = document.createElement('div');
     elem[0].appendChild(elemDiv);
 
@@ -26,27 +36,31 @@ export default class TypeWriter {
 
       setTimeout(() => {
         action();
-      }, 500);
-    }
+      }, this.interval);
+    };
 
     action();
   }
 
-  loopArray() {
+  loopArray(callback) {
     const action = () => {
       if (this.array.length === 0) {
-        return;
+        return callback();
       }
       this.displayArray(this.strToArray(this.array[0]), () => {
         action();
       });
       this.array.shift();
-    }
+    };
     action();
   }
 
-  init() {
-    this.loopArray();
+  init(options) {
+    console.log(options);
+    this.selector = options.selector || this.default.selector;
+    this.interval = options.interval || this.default.interval;
+    this.callback = options.callback || this.default.callback;
+    this.loopArray(this.callback);
   }
 
 }
