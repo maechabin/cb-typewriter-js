@@ -1,13 +1,18 @@
 {
   "name": "cbtypewriter",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
+  "keywords": "javascript",
   "main": ".dist/cb-typewriter.min.js",
   "scripts": {
     "watch": "babel ./src/app.js -w -o ./dist/cb-typewriter.js",
     "build": "babel ./src/app.js | uglifyjs -c warnings=false > ./dist/cb-typewriter.min.js"
   },
   "author": "Takanori Maeda (@maechabin)",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:maechabin/cb-typewriter-js.git"
+  },
   "license": "Mit license",
   "devDependencies": {
     "babel-cli": "^6.4.5",

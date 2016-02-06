@@ -11,7 +11,7 @@
 
 ## Download
 
-こちらのページから[]ダウンロード](https://github.com/maechabin/cb-typewriter-js/archive/master.zip)するか、`[git clone]`コマンドでローカルにコピーします。
+こちらのページから[ダウンロード](https://github.com/maechabin/cb-typewriter-js/archive/master.zip)するか、`[git clone]`コマンドでローカルにコピーします。
 
 ```
 $ git clone git@git@github.com:maechabin/cb-typewriter-js.git 任意のディレクトリ名
