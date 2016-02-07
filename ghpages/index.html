@@ -1,0 +1,105 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>typewriter</title>
+  <script src="../dist/cb-typewriter.min.js"></script>
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #263238;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    flex-direction: column;
+  }
+  .title .cb-tw {
+    color: #fff;
+    font-weight: bold;
+    font-family: 'メイリオ';
+    text-shadow: 0 0 30px #fff;
+
+    animation-name: anim;
+    animation-duration: 10s;
+    font-size: 64px;
+  }
+  @keyframes anim {
+    0% {
+      text-shadow: 0 0 0 #fff;
+      font-size: 0;
+    }
+    20% {
+      font-size: 64px;
+    }
+    100% {
+      text-shadow: 0 0 30px #fff;
+    }
+  }
+  .link {
+    color: #fff;
+    margin-top: 64px;
+  }
+  .link .cb-tw {
+    color: #fff;
+    font-weight: bold;
+    font-family: 'メイリオ';
+    text-shadow: 0 0 30px #fff;
+
+    animation-name: anim2;
+    animation-duration: 2s;
+  }
+  @keyframes anim2 {
+    0% {
+      text-shadow: 0 0 0 #fff;
+    }
+    100% {
+      text-shadow: 0 0 30px #fff;
+    }
+  }
+  a {
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 0 0 30px #fff;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="title"></div>
+  <p class="link"></p>
+  <script>
+  var title = new TypeWriter(['Hello World !!', 'cb-typewriter-js']);
+  title.init({
+    selector: '.title',
+    interval: 100,
+    callback: function () {
+      var link = new TypeWriter(['https://github.com/maechabin/cb-typewriter-js']);
+      link.init({
+        selector: '.link',
+        interval: 50,
+        callback: function () {
+          var url = document.querySelectorAll('.link');
+          url[0].innerHTML = '<a href="https://github.com/maechabin/cb-typewriter-js">https://github.com/maechabin/cb-typewriter-js</a>';
+        }
+      });
+    }
+  });
+  </script>
+</body>
+
+</html>

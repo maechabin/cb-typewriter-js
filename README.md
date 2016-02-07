@@ -46,7 +46,7 @@ class属性の値を`cb-typewriter`として、テキストを表示させる要
 
 ### 3. 表示させるテキストを設定
 
-<body>の閉じタグの直前に以下を挿入。`TypeWriter`オブジェクトの引数に表示させたいテキストを配列としてセットして、インスタンスを作成します。
+body要素の閉じタグの直前に以下を挿入。`TypeWriter`オブジェクトの引数に表示させたいテキストを配列としてセットして、インスタンスを作成します。
 
 ```javascript
 var typewriter = new TypeWriter(['Hello', 'World']);
@@ -70,10 +70,6 @@ typewriter.init();
 
 
 ## Option
-
-
-### ヘッダーバーの表示/非表示に関するオプション
-
 
 <dl>
 <dt>selector {String}</dt>
