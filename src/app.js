@@ -1,4 +1,4 @@
-class TypeWriter {
+export default class TypeWriter {
 
   constructor(arr) {
     this.default = {
