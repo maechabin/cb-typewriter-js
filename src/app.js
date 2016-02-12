@@ -1,4 +1,4 @@
-export default class TypeWriter {
+class TypeWriter {
 
   constructor(arr) {
     this.default = {
@@ -62,4 +62,9 @@ export default class TypeWriter {
     this.loopArray(this.callback);
   }
 
+}
+
+export default TypeWriter;
+if (typeof window != "undefined") {
+  !window.boilerplate && (window.TypeWriter = TypeWriter);
 }
