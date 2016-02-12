@@ -140,7 +140,7 @@
       }]), TypeWriter;
     }();
 
-    exports["default"] = TypeWriter, "undefined" != typeof window && !window.boilerplate && (window.TypeWriter = TypeWriter);
+    exports["default"] = TypeWriter, "undefined" != typeof window && !window.TypeWriter && (window.TypeWriter = TypeWriter);
   });
 });
 

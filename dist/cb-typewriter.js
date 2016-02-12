@@ -125,6 +125,6 @@
   exports.default = TypeWriter;
 
   if (typeof window != "undefined") {
-    !window.boilerplate && (window.TypeWriter = TypeWriter);
+    !window.TypeWriter && (window.TypeWriter = TypeWriter);
   }
 });
