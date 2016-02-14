@@ -36,9 +36,19 @@ distディレクトリ内の「cb-typewriter.min.js」をページに読み込�
 <script src="./dist/cb-typewriter.min.js"></script>
 ```
 
+※ES6（ES2015）のimportやrequire()関数で読み込むことも可能です。
+```javascript
+import TypeWriter from 'cbtypewriter';
+```
+or
+```javascript
+var TypeWriter = require('cbtypewriter');
+```
+
+
 ### 2. テキストを表示させる要素を準備
 
-class属性の値を`cb-typewriter`として、テキストを表示させる要素を作成します。（class属性の値はオプションで任意の値に変更することも可能です。）
+class属性の値を`cb-typewriter`として、htmlファイル内にテキストを表示させる要素を作成します。（class属性の値はオプションで任意の値に変更することも可能です。）
 
 ```html
 <div class="cb-typewriter"></div>
@@ -144,3 +154,9 @@ typewrite.init({
 ## License
 
 MIT license
+
+## Update
+
+### v0.3.0
+
+UMD対応
