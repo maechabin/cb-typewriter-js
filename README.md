@@ -1,6 +1,7 @@
 # cb-typewriter-js
 
 ## About
+
 「cb-typewriter.js」は、任意のテキストをタイプライターで打っているかのように、１文字ずつ画面上に表示させるためのJSライブラリです。
 
 
@@ -81,16 +82,14 @@ typewriter.init();
 
 ## Option
 
-<dl>
-<dt>selector {String}</dt>
-<dd>表示させるテキストの要素のセレクタ名を指定します。任意のセレクタ名を持った要素に対して、ライブラリを実行したい時に使うオプションです。`.selector`、`#selector`などcssで使用するセレクタ名で指定します。デフォルト値は`.cb-typewriter`。</dd>
+**selector {String}**
+表示させるテキストの要素のセレクタ名を指定します。任意のセレクタ名を持った要素に対して、ライブラリを実行したい時に使うオプションです。`.selector`、`#selector`などcssで使用するセレクタ名で指定します。デフォルト値は`.cb-typewriter`。
 
-<dt>interval {Number (Integer)}</dt>
-<dd>テキストの表示速度を指定します。数字で指定。単位はms（ミリ秒: 1/1000秒）となります。デフォルト値は`500`。</dd>
+**interval {Number (Integer)}**
+テキストの表示速度を指定します。数字で指定。単位はms（ミリ秒: 1/1000秒）となります。デフォルト値は`500`。
 
-<dt>callback {Function}</dt>
-<dd>テキストが完全に表示された後に実行させるコールバック関数を指定します。デフォルト値は`null`。</dd>
-</dl>
+**callback {Function}**
+テキストが完全に表示された後に実行させるコールバック関数を指定します。デフォルト値は`null`。
 
 
 ## Example
@@ -157,6 +156,5 @@ MIT license
 
 ## Update
 
-### v0.3.0
-
-UMD対応
+**v0.3.1** README.md修正
+**v0.3.0** UMD対応

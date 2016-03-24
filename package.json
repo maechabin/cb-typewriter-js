@@ -1,7 +1,7 @@
 {
   "name": "cbtypewriter",
-  "version": "0.3.0",
-  "description": "",
+  "version": "0.3.1",
+  "description": "「cb-typewriter.js」は、任意のテキストをタイプライターで打っているかのように、１文字ずつ画面上に表示させるためのJSライブラリです。",
   "keywords": "javascript",
   "main": "./dist/cb-typewriter.min.js",
   "scripts": {
