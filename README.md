@@ -10,7 +10,7 @@ cb-typewriter.jsは、任意のテキストをタイプライターで打って�
 
 ## DEMO
 
-[http://jsrun.it/maechabin/UrTN](http://jsrun.it/maechabin/UrTN)
+[https://www.maechabin.com/cb-typewriter-js/](https://www.maechabin.com/cb-typewriter-js/)
 
 
 ## Download
